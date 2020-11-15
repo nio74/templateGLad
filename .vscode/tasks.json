@@ -3,24 +3,22 @@
     "tasks": [
 		{
 			"label": "HelloWorld",
-			"type": "shell",
+			"type": "che",
 			"command": "clang++",
 			"args": [
 			
 				
 				"-std=c++17",
 				"-stdlib=libc++",
-				
-				//"-I ${workspaceRoot}",
 				"-lglfw",
 				"-lglew",
 				"--include-directory=include/",
 				"--include-directory=build/",
 				"--include=include/glad.c",
-				"-g",
-				
 				//"${workspaceFolder}/include",
+				//"${workspaceFolder}/build",
 				//"${fileDirname}/include/glad.c",
+				
 				"-framework",
 				"OpenGL",
 				"-framework",
@@ -30,7 +28,7 @@
 				"src/helloworld.cpp",
 				"-o",
 				"build/helloworld",
-				//"--debug"
+				"--debug"
 			],
 			"group": {
 				"kind": "build",
